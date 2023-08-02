@@ -27,3 +27,12 @@ print()
 x = random.choice([3, 5, 7, 9], size=(3, 5))  # generates a 2-dimensional array from the values in the array given
 print(x)
 
+#  Random data distribution
+x = random.choice([3, 5, 7, 9], p=[0.1, 0.3, 0.6, 0.0], size=100)  # we set our probability to how we want the
+# distribution to occur, 7 will occur most and 9 will never occur, note that sum of all probabilities must be 1
+print(x)
+
+print()
+
+x = random.choice([3, 5, 7, 9], p=[0.1, 0.3, 0.6, 0.0], size=(3, 5))
+print(x)
