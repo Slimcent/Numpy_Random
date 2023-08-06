@@ -1,5 +1,7 @@
 from numpy import random
 import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
 
 x = random.randint(100)  # generates a random integeer
 print(x)
@@ -50,3 +52,34 @@ print()
 arr2 = np.array([1, 2, 3, 4, 5])
 print(random.permutation(arr2))  # permutation returns a shuffled copy of the original, does not shuffle the original
 print(arr2)  # the original array remains the same.
+
+print()
+
+# sns.displot([0, 1, 2, 3, 4, 5])
+# plt.show()
+
+# sns.distplot([0, 1, 2, 3, 4, 5], hist=False)
+# plt.show()
+
+# Normal or Gaussian distribution
+# x = random.normal(size=(2, 3))
+# print(x)
+#
+# x = random.normal(loc=1, scale=2, size=(2, 3))
+# print(x)
+#
+# sns.distplot(random.normal(size=1000), hist=False)
+# plt.show()
+
+print()
+
+#  Binomial distribution
+x = random.binomial(n=10, p=0.5, size=10)
+print(x)
+
+sns.distplot(random.binomial(n=10, p=0.5, size=1000), hist=True, kde=False)
+plt.xlabel('Data')
+plt.ylabel('Frequency')
+plt.title('Histogram of Binomial Distribution')
+
+plt.show()
